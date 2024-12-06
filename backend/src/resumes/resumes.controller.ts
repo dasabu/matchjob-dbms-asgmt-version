@@ -26,7 +26,7 @@ export class ResumesController {
 
   @Post('by-user')
   @ResponseMessage('Fetched resumes by user successfully')
-  getResumesByUser(@User() user: IUser) {
+  getResumesByUser(@User() user) {
     return this.resumesService.findByUsers(user);
   }
 

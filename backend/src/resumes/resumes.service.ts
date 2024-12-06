@@ -84,13 +84,32 @@ export class ResumesService implements OnModuleInit {
   }
 
   async findByUsers(user: IUser) {
-    const resumes = await this.db
-      .collection('resumes')
-      .find({ userId: new ObjectId(user._id) })
-      //   .sort({ createdAt: -1 })
-      .toArray();
+    const pipeline = [
+      {
+        $lookup: {
+          from: 'resumes',
+          localField: '_id',
+          foreignField: 'userId',
+          as: 'userResumes',
+        },
+      },
+      {
+        $match: {
+          _id: new ObjectId(user._id),
+        },
+      },
+      {
+        $project: {
+          userResumes: 1,
+        },
+      },
+    ];
 
-    return resumes;
+    const result = await this.db
+      .collection('users')
+      .aggregate(pipeline)
+      .toArray();
+    return result.length > 0 ? result[0].userResumes : [];
   }
 
   async update(id: string, status: string) {

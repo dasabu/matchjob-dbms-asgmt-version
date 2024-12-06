@@ -71,7 +71,7 @@ export class RolesService implements OnModuleInit {
 
   async findOne(id: string) {
     const objectId = new ObjectId(id);
-    console.log('id: ', id);
+    // console.log('id: ', id);
 
     // Lấy role và populate permissions
     const role = await this.db
