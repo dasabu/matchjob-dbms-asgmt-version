@@ -19,8 +19,6 @@ export default function Navbar() {
   const user = useAuthStore((state) => state.user)
   const navigate = useNavigate()
 
-  console.log('user at navbar: ', user)
-
   // Hàm kiểm tra route có khớp (bao gồm các route con)
   const isActive = (path: string) => {
     return useMatch({ path, end: path === '/' })

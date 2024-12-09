@@ -8,19 +8,23 @@ import {
 } from '../../components/ui/card'
 import { Skeleton } from '../../components/ui/skeleton'
 import parse from 'html-react-parser'
-import { getCompanyByIdApi } from '../../apis/company.api'
+import { getCompanyByIdApi, getJobsByCompany } from '../../apis/company.api'
 import { useQuery } from '@tanstack/react-query'
-import { ICompany } from '../../interfaces/schemas'
+import { ICompany, IJob } from '../../interfaces/schemas'
 import { useEffect, useState } from 'react'
+import { Button } from '../../components/ui/button'
+import JobModal from '../../components/JobModal'
 
 export default function CompanyDetailPage() {
   const [company, setCompany] = useState<ICompany | undefined>()
+  const [jobs, setJobs] = useState<IJob[]>([])
+  const [openModal, setOpenModal] = useState<boolean>(false)
 
   const location = useLocation()
   const params = new URLSearchParams(location.search)
   const id = params.get('id')
 
-  const { data, isPending } = useQuery({
+  const companyDetail = useQuery({
     queryKey: ['company', id],
     queryFn: ({ queryKey }) => {
       const id = queryKey[1]
@@ -28,13 +32,27 @@ export default function CompanyDetailPage() {
     },
   })
 
-  useEffect(() => {
-    if (data?.data?.data) {
-      setCompany(data?.data?.data)
-    }
-  }, [data?.data?.data])
+  const companyJobs = useQuery({
+    queryKey: ['company-jobs', id],
+    queryFn: ({ queryKey }) => {
+      const id = queryKey[1]
+      return getJobsByCompany(id!)
+    },
+  })
 
-  if (isPending) {
+  useEffect(() => {
+    if (companyDetail?.data?.data?.data) {
+      setCompany(companyDetail?.data?.data?.data)
+    }
+  }, [companyDetail?.data?.data?.data])
+
+  useEffect(() => {
+    if (companyJobs.data?.data.data) {
+      setJobs(companyJobs.data?.data.data)
+    }
+  }, [companyJobs.data?.data.data])
+
+  if (companyDetail?.isPending || companyJobs?.isPending) {
     return (
       <div className="max-w-7xl mx-auto p-4 h-screen w-full">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -57,14 +75,23 @@ export default function CompanyDetailPage() {
 
   return (
     <div className="max-w-7xl mx-auto p-4">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="md:col-span-2 order-2 md:order-1">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="md:col-span-3 order-2 md:order-1">
           <Card>
             <CardHeader>
-              <CardTitle>{company.name}</CardTitle>
+              <CardTitle className="text-2xl">{company.name}</CardTitle>
               <div className="flex items-center text-muted-foreground">
                 <MapPin className="w-4 h-4 mr-1" />
                 <span>{company.address}</span>
+              </div>
+              <div>
+                <Button
+                  variant="link"
+                  className="p-0 italic text-blue-500"
+                  onClick={() => setOpenModal(true)}
+                >
+                  Click to see opening jobs
+                </Button>
               </div>
             </CardHeader>
             <CardContent>{parse(company.description || '')}</CardContent>
@@ -83,6 +110,7 @@ export default function CompanyDetailPage() {
           </Card>
         </div>
       </div>
+      <JobModal jobs={jobs} open={openModal} onOpenChange={setOpenModal} />
     </div>
   )
 }

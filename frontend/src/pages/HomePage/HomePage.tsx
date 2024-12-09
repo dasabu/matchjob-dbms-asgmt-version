@@ -3,18 +3,28 @@ import JobSearchForm from '../../components/JobSearchForm'
 import { Separator } from '../../components/ui/separator'
 import CompanyCard from '../../components/CompanyCard'
 import { useFetchDataWithPagination } from '../../hooks/useFetchDataWithPagination'
-import { getCompaniesApi } from '../../apis/company.api'
+import {
+  // getCompaniesApi,
+  getCompaniesJobStatsApi,
+} from '../../apis/company.api'
 import { ICompany, IJob } from '../../interfaces/schemas'
-import { getJobsApi } from '../../apis/job.api'
+import { getJobsApi, getSkillsStatistic } from '../../apis/job.api'
 import JobCard from '../../components/JobCard'
+import { useQuery } from '@tanstack/react-query'
+import SkillsChart from '../../components/SkillsChart'
 
 export default function HomePage() {
   const { data: companies } = useFetchDataWithPagination<ICompany>(
-    getCompaniesApi,
+    getCompaniesJobStatsApi,
     4
   )
 
   const { data: jobs } = useFetchDataWithPagination<IJob>(getJobsApi, 6)
+
+  const { data: skillsStats } = useQuery({
+    queryKey: ['skills-stats'],
+    queryFn: getSkillsStatistic,
+  })
 
   return (
     <div className="max-w-7xl mx-auto p-4">
@@ -58,6 +68,15 @@ export default function HomePage() {
       </div>
       {/* Separator */}
       <Separator />
+      {skillsStats?.data?.data && (
+        <div className="px-2 py-4 mt-12 mb-16">
+          <h2 className="text-4xl font-medium mb-8">
+            Thống kê kỹ năng được tuyển dụng nhiều
+          </h2>
+          <SkillsChart skills={skillsStats.data.data} />
+        </div>
+      )}
+      <Separator />
       {/* Top Companies */}
       <div className="px-2 py-4 mt-12 mb-16">
         <div className="flex flex-row justify-between items-center mb-4">
@@ -72,8 +91,15 @@ export default function HomePage() {
         <div className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {companies &&
-              companies.map(({ _id, name, logo }) => (
-                <CompanyCard key={_id!} _id={_id!} name={name!} logo={logo} />
+              companies.map(({ _id, name, logo, totalJobs, maxSalary }) => (
+                <CompanyCard
+                  key={_id!}
+                  _id={_id!}
+                  name={name!}
+                  logo={logo}
+                  totalJobs={totalJobs}
+                  maxSalary={maxSalary}
+                />
               ))}
           </div>
         </div>

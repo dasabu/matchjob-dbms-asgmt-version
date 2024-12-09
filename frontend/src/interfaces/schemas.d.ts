@@ -26,6 +26,10 @@ export interface ICompany {
   deletedAt?: boolean | null
   createdAt?: string
   updatedAt?: string
+
+  totalJobs?: number
+  maxSalary?: number
+  maxSalaryJobId?: string
 }
 
 export interface IJob {
@@ -157,4 +161,9 @@ export interface IResume {
   deletedAt?: boolean | null
   createdAt?: string
   updatedAt?: string
+}
+
+export interface ISkill {
+  total: number
+  skill: string
 }

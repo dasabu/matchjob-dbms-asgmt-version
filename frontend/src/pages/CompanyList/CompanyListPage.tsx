@@ -1,4 +1,4 @@
-import { getCompaniesApi } from '../../apis/company.api'
+import { getCompaniesJobStatsApi } from '../../apis/company.api'
 import CompanyCard from '../../components/CompanyCard'
 import PaginationComponent from '../../components/PaginationComponent'
 import { useFetchDataWithPagination } from '../../hooks/useFetchDataWithPagination'
@@ -12,7 +12,7 @@ export default function CompanyListPage() {
     current,
     pageSize,
     setCurrent,
-  } = useFetchDataWithPagination<ICompany>(getCompaniesApi, 8)
+  } = useFetchDataWithPagination<ICompany>(getCompaniesJobStatsApi, 8)
 
   const { renderPageNumbers, handlePrevious, handleNext } = usePagination({
     total,
@@ -40,8 +40,15 @@ export default function CompanyListPage() {
       <div className="space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
           {companies &&
-            companies.map(({ _id, name, logo }) => (
-              <CompanyCard key={_id!} _id={_id!} name={name!} logo={logo} />
+            companies.map(({ _id, name, logo, maxSalary, totalJobs }) => (
+              <CompanyCard
+                key={_id!}
+                _id={_id!}
+                name={name!}
+                logo={logo}
+                maxSalary={maxSalary}
+                totalJobs={totalJobs}
+              />
             ))}
         </div>
       </div>

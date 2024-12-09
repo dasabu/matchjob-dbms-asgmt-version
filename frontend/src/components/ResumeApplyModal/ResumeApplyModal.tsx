@@ -193,7 +193,9 @@ export default function ResumeApplyModal({
               </FormItem>
               <Separator />
               <DialogFooter className="mt-4">
-                <Button type="submit">Submit</Button>
+                <Button type="submit" className="w-full bg-red-600 font-normal">
+                  Submit
+                </Button>
               </DialogFooter>
             </form>
           </Form>

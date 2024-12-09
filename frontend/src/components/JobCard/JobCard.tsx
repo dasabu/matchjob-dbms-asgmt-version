@@ -29,7 +29,7 @@ export default function JobCard({
 }: IJobCardProps) {
   const navigate = useNavigate()
 
-  const handleNavigateToCompanyDetail = () => {
+  const handleNavigateToJobDetail = () => {
     if (_id && name) {
       const slug = generateSlug(name)
       navigate(`/jobs/${slug}?id=${_id}`)
@@ -39,7 +39,7 @@ export default function JobCard({
   return (
     <Card
       className="hover:shadow-lg transition-shadow"
-      onClick={handleNavigateToCompanyDetail}
+      onClick={handleNavigateToJobDetail}
     >
       <CardContent className="p-6 flex items-center space-x-1">
         <img
