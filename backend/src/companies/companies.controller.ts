@@ -28,10 +28,32 @@ export class CompaniesController {
   @ResponseMessage('Fetched companies with pagination')
   findAll(
     @Query('current') currentPage: string,
-    @Query('pageSize') limit: string,
+    @Query('pageSize') pageSize: string,
     @Query() qs: string,
   ) {
-    return this.companiesService.findAll(+currentPage, +limit, qs);
+    return this.companiesService.findAll(+currentPage, +pageSize, qs);
+  }
+
+  @Get('/job-stats')
+  @Public()
+  @ResponseMessage('Fetched company job statistics successfully')
+  async getCompanyJobStats(
+    @Query('current') currentPage: string,
+    @Query('pageSize') pageSize: string,
+    @Query() qs: string,
+  ) {
+    return this.companiesService.getCompanyJobStats(
+      +currentPage,
+      +pageSize,
+      qs,
+    );
+  }
+
+  @Get(':id/jobs')
+  @Public()
+  @ResponseMessage('Fetched jobs by company successfully')
+  async getJobsByCompanyId(@Param('id') companyId: string) {
+    return this.companiesService.getJobsByCompanyId(companyId);
   }
 
   @Get(':id')

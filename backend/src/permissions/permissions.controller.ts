@@ -49,7 +49,7 @@ export class PermissionsController {
   }
 
   @Delete(':id')
-  @ResponseMessage('Permission deleted sucessfully')
+  @ResponseMessage('Permission deleted successfully')
   remove(@Param('id') id: string) {
     return this.permissionsService.remove(id);
   }

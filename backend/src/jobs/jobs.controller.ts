@@ -34,6 +34,31 @@ export class JobsController {
     return this.jobsService.findAll(+currentPage, +limit, qs);
   }
 
+  @Get('/search')
+  @Public()
+  @ResponseMessage('Fetched jobs by location and skills successfully')
+  getJobByLocationAndSkills(
+    @Query('location') location: string,
+    @Query('skills') skills: string,
+  ) {
+    const skillsArray = skills ? skills.split(',') : [];
+    return this.jobsService.getJobsByLocationAndSkills(location, skillsArray);
+  }
+
+  @Get('/skills-stats')
+  @Public()
+  @ResponseMessage('Fetched skills statistics successfully')
+  async getSkillsStats() {
+    return this.jobsService.getSkillsStats();
+  }
+
+  @Get(':id/resumes-count')
+  @Public()
+  @ResponseMessage('Fetched skills statistics successfully')
+  async getResumesCountByJobId(@Param('id') id: string) {
+    return this.jobsService.getResumesCountByJobId(id);
+  }
+
   @Get(':id')
   @Public()
   @ResponseMessage('Successfully fetched job by id')

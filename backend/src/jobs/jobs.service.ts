@@ -92,4 +92,64 @@ export class JobsService implements OnModuleInit {
 
     return { message: 'Xóa Job thành công' };
   }
+
+  async getJobsByLocationAndSkills(location: string, skills: string[]) {
+    const query: { location?: string; skills?: { $in: string[] } } = {};
+
+    if (location) {
+      query.location = location; // query = { location: 'HANOI' }
+    }
+    if (skills.length > 0) {
+      query.skills = { $in: skills }; // query = { skills: { $in: ['TYPESCRIPT', 'REACT.JS'] }}
+    }
+    // Result: query = { location: 'HANOI', skills: { $in: ['TYPESCRIPT', 'REACT.JS'] } }
+
+    const result = await this.db.collection('jobs').find(query).toArray();
+    return result;
+  }
+
+  async getSkillsStats() {
+    const pipeline = [
+      { $unwind: '$skills' },
+      { $group: { _id: '$skills', total: { $sum: 1 } } },
+      { $project: { skill: '$_id', total: 1, _id: 0 } },
+      // { $sort: { total: -1 } },
+    ];
+
+    const result = await this.db
+      .collection('jobs')
+      .aggregate(pipeline)
+      .toArray();
+
+    return result;
+  }
+
+  async getResumesCountByJobId(id: string) {
+    const pipeline = [
+      {
+        $match: { _id: new ObjectId(id) }, // Tìm job cụ thể
+      },
+      {
+        $lookup: {
+          from: 'resumes', // Join với collection resumes
+          localField: '_id', // Trường _id trong jobs
+          foreignField: 'jobId', // Trường jobId trong resumes
+          as: 'resumes', // Kết quả join
+        },
+      },
+      {
+        $project: {
+          _id: 1,
+          totalResumes: { $size: '$resumes' }, // Đếm số lượng resume đã nộp
+        },
+      },
+    ];
+
+    const result = await this.db
+      .collection('jobs')
+      .aggregate(pipeline)
+      .toArray();
+
+    return result[0];
+  }
 }
