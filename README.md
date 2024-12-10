@@ -1,27 +1,53 @@
-1. Run backend (locally)
+# MatchJob Application
 
-- Install dependencies:
+This repository contains both the frontend and backend of the MatchJob application. Follow the steps below to set up and run the application locally.
 
-```
-npm install
-```
+---
 
-- Run:
+## Prerequisites
 
-```
-npm run start:dev
-```
+- **Node.js**: Ensure you have Node.js installed on your machine. [Download Node.js](https://nodejs.org/)
+- **MongoDB**: Install and run MongoDB locally. [MongoDB Installation Guide](https://www.mongodb.com/docs/manual/installation/)
 
-2. Run frontend (locally)
+---
 
-- Install dependencies:
+## Run Locally
 
-```
-npm install
-```
+### 1. Backend
 
-- Run:
+#### Steps:
 
-```
-npm run dev
-```
+1. Navigate to the `backend` directory:
+   ```bash
+   cd backend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run start:dev
+   ```
+
+### 2. Frontend
+
+#### Steps:
+
+1. Navigate to the `frontend` directory:
+   ```bash
+   cd frontend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+### Access the Application
+
+- Frontend: Open your browser and navigate to `http://localhost:3000`.
+- Backend: The backend server will be running on `http://localhost:3333`

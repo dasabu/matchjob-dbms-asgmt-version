@@ -34,9 +34,9 @@ export default function CompanyCard({
     }
   }
 
-  const handleGetJobs = () => {
+  const handleGetJobs = async () => {
     if (_id) {
-      const response = getJobsByCompany(_id)
+      const response = await getJobsByCompany(_id)
 
       setJobs(response.data.data)
       setIsModalOpen(true)
