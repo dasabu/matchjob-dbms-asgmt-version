@@ -1,0 +1,189 @@
+[
+  {
+    "_id": {
+      "$oid": "6717776e43f578b1655edf3a"
+    },
+    "name": "SUPER_ADMIN",
+    "description": "Super Admin có quyền cao nhất hệ thống",
+    "isActive": true,
+    "permissions": [
+      {
+        "$oid": "648ab415f4328bd3153ee211"
+      },
+      {
+        "$oid": "648ab436f4328bd3153ee216"
+      },
+      {
+        "$oid": "648ab4d5f4328bd3153ee21b"
+      },
+      {
+        "$oid": "648ab4ebf4328bd3153ee220"
+      },
+      {
+        "$oid": "648ab5a8072f2a2ef910638d"
+      },
+      {
+        "$oid": "648ab6d3fa16b294212e4033"
+      },
+      {
+        "$oid": "648ab6e7fa16b294212e4038"
+      },
+      {
+        "$oid": "648ab6fdfa16b294212e403d"
+      },
+      {
+        "$oid": "648ab719fa16b294212e4042"
+      },
+      {
+        "$oid": "648ab728fa16b294212e4047"
+      },
+      {
+        "$oid": "648ab750fa16b294212e404c"
+      },
+      {
+        "$oid": "648ad488dafdb9754f40b846"
+      },
+      {
+        "$oid": "648ad499dafdb9754f40b84b"
+      },
+      {
+        "$oid": "648ad4a6dafdb9754f40b850"
+      },
+      {
+        "$oid": "648ad4ccdafdb9754f40b859"
+      },
+      {
+        "$oid": "648ad4d9dafdb9754f40b85e"
+      },
+      {
+        "$oid": "648ad4fedafdb9754f40b863"
+      },
+      {
+        "$oid": "648ad511dafdb9754f40b868"
+      },
+      {
+        "$oid": "648ad522dafdb9754f40b86d"
+      },
+      {
+        "$oid": "648ad53bdafdb9754f40b872"
+      },
+      {
+        "$oid": "648ad555dafdb9754f40b877"
+      },
+      {
+        "$oid": "648ad56ddafdb9754f40b87c"
+      },
+      {
+        "$oid": "648ad59adafdb9754f40b881"
+      },
+      {
+        "$oid": "648ad5aedafdb9754f40b886"
+      },
+      {
+        "$oid": "648ad5c5dafdb9754f40b88b"
+      },
+      {
+        "$oid": "648ad5d4dafdb9754f40b890"
+      },
+      {
+        "$oid": "648ad5ebdafdb9754f40b895"
+      },
+      {
+        "$oid": "648ad613dafdb9754f40b89a"
+      },
+      {
+        "$oid": "648ad622dafdb9754f40b89f"
+      },
+      {
+        "$oid": "648ad630dafdb9754f40b8a6"
+      },
+      {
+        "$oid": "648ad640dafdb9754f40b8ab"
+      },
+      {
+        "$oid": "648ad650dafdb9754f40b8b0"
+      },
+      {
+        "$oid": "67526a3d2fe7ef0c306f8edf"
+      },
+      {
+        "$oid": "6754a801b321ba077a4221d3"
+      },
+      {
+        "$oid": "6754ad70b990e064b4b0f8d3"
+      },
+      {
+        "$oid": "6756f6c7acd461456f80ea9f"
+      }
+    ],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-10-22T09:59:10.155Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-03T13:29:45.832Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6717776e43f578b1655edf3b"
+    },
+    "name": "NORMAL_USER",
+    "description": "Người dùng sử dụng hệ thống",
+    "isActive": true,
+    "permissions": [
+      {
+        "$oid": "648ab415f4328bd3153ee211"
+      },
+      {
+        "$oid": "648ab5a8072f2a2ef910638d"
+      },
+      {
+        "$oid": "648ab6e7fa16b294212e4038"
+      },
+      {
+        "$oid": "648ab6fdfa16b294212e403d"
+      },
+      {
+        "$oid": "648ab750fa16b294212e404c"
+      },
+      {
+        "$oid": "648ad499dafdb9754f40b84b"
+      },
+      {
+        "$oid": "648ad4ccdafdb9754f40b859"
+      },
+      {
+        "$oid": "648ad4fedafdb9754f40b863"
+      },
+      {
+        "$oid": "648ad511dafdb9754f40b868"
+      },
+      {
+        "$oid": "648ad522dafdb9754f40b86d"
+      },
+      {
+        "$oid": "648ad56ddafdb9754f40b87c"
+      },
+      {
+        "$oid": "67526a3d2fe7ef0c306f8edf"
+      },
+      {
+        "$oid": "6754a801b321ba077a4221d3"
+      },
+      {
+        "$oid": "6754ad70b990e064b4b0f8d3"
+      },
+      {
+        "$oid": "6756f6c7acd461456f80ea9f"
+      }
+    ],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-10-22T09:59:10.155Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-03T16:44:42.636Z"
+    }
+  }
+]

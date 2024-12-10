@@ -1,0 +1,117 @@
+[
+  {
+    "_id": {
+      "$oid": "6750c31b7a0c70d369f5b0e0"
+    },
+    "url": "teshima2018-1733346074194.pdf",
+    "companyId": {
+      "$oid": "64871896c7573fac797f840a"
+    },
+    "email": "duyanh@gmail.com",
+    "jobId": {
+      "$oid": "6487e7aae263fe0b853d757e"
+    },
+    "userId": {
+      "$oid": "674f8be8e61f5b15da47c404"
+    },
+    "status": "REVIEWING",
+    "createdAt": {
+      "$date": "2024-12-04T21:01:15.018Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-07T09:54:07.337Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6750c4a4fc8ccbc52cfeecb4"
+    },
+    "url": "2103.00270v1-1733346467580.pdf",
+    "companyId": {
+      "$oid": "64871701c7573fac797f83ea"
+    },
+    "email": "duyanh@gmail.com",
+    "jobId": {
+      "$oid": "6487e52ae263fe0b853d752a"
+    },
+    "userId": {
+      "$oid": "674f8be8e61f5b15da47c404"
+    },
+    "status": "REJECTED",
+    "createdAt": {
+      "$date": "2024-12-04T21:07:48.550Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-04T21:13:14.817Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6752053d7bd1f754309dfee2"
+    },
+    "url": "s10462-024-10851-x-1733428538735.pdf",
+    "companyId": {
+      "$oid": "6752045b7bd1f754309dfedf"
+    },
+    "email": "duyanh@gmail.com",
+    "jobId": {
+      "$oid": "675204a67bd1f754309dfee0"
+    },
+    "userId": {
+      "$oid": "674f8be8e61f5b15da47c404"
+    },
+    "status": "PENDING",
+    "createdAt": {
+      "$date": "2024-12-05T19:55:41.202Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-05T19:55:41.202Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6752600f91ada7fe4aad71dc"
+    },
+    "url": "s10462-024-10851-x-1733451790453.pdf",
+    "companyId": {
+      "$oid": "6752045b7bd1f754309dfedf"
+    },
+    "email": "admin@amazon.com",
+    "jobId": {
+      "$oid": "675204a67bd1f754309dfee0"
+    },
+    "userId": {
+      "$oid": "674f88b4b7aeb50679f67521"
+    },
+    "status": "PENDING",
+    "createdAt": {
+      "$date": "2024-12-06T02:23:11.269Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-06T02:23:11.269Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6754c17c1e4fa611dcd62eaa"
+    },
+    "url": "s10462-024-10851-x-1733607803314.pdf",
+    "companyId": {
+      "$oid": "67508ccf1e6e4f100512df3f"
+    },
+    "email": "da@gmail.com",
+    "jobId": {
+      "$oid": "6750c881fc8ccbc52cfeecb9"
+    },
+    "userId": {
+      "$oid": "67503e7206bf11e196e225b8"
+    },
+    "status": "PENDING",
+    "createdAt": {
+      "$date": "2024-12-07T21:43:24.170Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-07T21:43:24.170Z"
+    }
+  }
+]

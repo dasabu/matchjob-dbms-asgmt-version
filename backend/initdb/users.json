@@ -1,0 +1,596 @@
+[
+  {
+    "_id": {
+      "$oid": "674f88b4b7aeb50679f67521"
+    },
+    "name": "Admin Amazon",
+    "age": 29,
+    "gender": "male",
+    "address": "28 Elm Street",
+    "role": {
+      "$oid": "6717776e43f578b1655edf3a"
+    },
+    "company": {
+      "_id": "64871701c7573fac797f83ea",
+      "name": "Amazon.com, Inc"
+    },
+    "email": "admin@amazon.com",
+    "password": "$2a$10$c/xJoMMqxlldotmL//IUFefaLyjiRJYY1/9LjCj6OHgz7Gi2dxPUu",
+    "createdAt": {
+      "$date": "2024-12-03T22:39:48.475Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-03T22:39:48.475Z"
+    },
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b2tlbiBsb2dpbiIsImlzcyI6ImZyb20gc2VydmVyIiwiX2lkIjoiNjc0Zjg4YjRiN2FlYjUwNjc5ZjY3NTIxIiwibmFtZSI6IkFkbWluIEFtYXpvbiIsImVtYWlsIjoiYWRtaW5AYW1hem9uLmNvbSIsInJvbGUiOiI2NzE3Nzc2ZTQzZjU3OGIxNjU1ZWRmM2EiLCJpYXQiOjE3MzM0NTE3NzAsImV4cCI6MTczMzUzODE3MH0.vWSYoan7CSC2gIvh8HQbMNgZvmWD79jEolduGhIdeEU"
+  },
+  {
+    "_id": {
+      "$oid": "674f88c6b7aeb50679f67522"
+    },
+    "name": "User Amazon",
+    "age": 45,
+    "gender": "female",
+    "address": "302 Main Street",
+    "role": {
+      "$oid": "6717776e43f578b1655edf3b"
+    },
+    "company": {
+      "_id": "64871701c7573fac797f83ea",
+      "name": "Amazon.com, Inc"
+    },
+    "email": "user@amazon.com",
+    "password": "$2a$10$Gr2jm2tjqANY3BztJ8u40epcg/uChAPVV/FuH1LLDLxaQNy9B5Uwq",
+    "createdAt": {
+      "$date": "2024-12-03T22:40:06.713Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-03T22:40:06.713Z"
+    },
+    "refreshToken": ""
+  },
+  {
+    "_id": {
+      "$oid": "674f88f8b7aeb50679f67523"
+    },
+    "name": "Admin Apple",
+    "age": 46,
+    "gender": "male",
+    "address": "953 Main Street",
+    "role": {
+      "$oid": "6717776e43f578b1655edf3a"
+    },
+    "company": {
+      "_id": "64871777c7573fac797f83f6",
+      "name": "Apple Inc."
+    },
+    "email": "admin@apple.com",
+    "password": "$2a$10$fzxuWcZGLh9zqdHvrDLb4.C.bHakmmhuGoHS7ZKJUjPF/7h.DlsGC",
+    "createdAt": {
+      "$date": "2024-12-03T22:40:56.118Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-03T22:40:56.118Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "674f8905b7aeb50679f67524"
+    },
+    "name": "User Apple",
+    "age": 39,
+    "gender": "male",
+    "address": "184 Main Street",
+    "role": {
+      "$oid": "6717776e43f578b1655edf3b"
+    },
+    "company": {
+      "_id": "64871777c7573fac797f83f6",
+      "name": "Apple Inc."
+    },
+    "createdAt": {
+      "$date": "2024-12-03T22:41:09.144Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-03T22:41:09.144Z"
+    },
+    "email": "user@apple.com",
+    "password": "$2a$10$8hsMgrYniKab0WsGQwjBxu/ODUii.c3Bs3bLe5mBrLgg6CcGCuXJC"
+  },
+  {
+    "_id": {
+      "$oid": "674f897fb7aeb50679f67525"
+    },
+    "name": "Admin Google",
+    "age": 41,
+    "gender": "male",
+    "address": "738 Elm Street",
+    "role": {
+      "$oid": "6717776e43f578b1655edf3a"
+    },
+    "company": {
+      "_id": "648717bdc7573fac797f83fa",
+      "name": "Google LLC"
+    },
+    "email": "admin@google.com",
+    "password": "$2a$10$.gE2KMiga5S2q/iYM9aZveduda4RIky5Ex.omYWY06YqA9F/EDzxu",
+    "createdAt": {
+      "$date": "2024-12-03T22:43:11.612Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-03T22:43:11.612Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "674f8990b7aeb50679f67526"
+    },
+    "name": "User",
+    "age": 41,
+    "gender": "female",
+    "address": "628 Main Street",
+    "role": {
+      "$oid": "6717776e43f578b1655edf3b"
+    },
+    "company": {
+      "_id": "648717bdc7573fac797f83fa",
+      "name": "Google LLC"
+    },
+    "email": "user@google.com",
+    "password": "$2a$10$KrNidgCdoohb5K3lPOShK.3h7A1fSdqOPZDyP/O3vXgR0BxPuQUXu",
+    "createdAt": {
+      "$date": "2024-12-03T22:43:28.663Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-03T22:43:28.663Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "674f89a0b7aeb50679f67527"
+    },
+    "name": "Admin Lazada",
+    "age": 36,
+    "gender": "female",
+    "address": "264 Elm Street",
+    "role": {
+      "$oid": "6717776e43f578b1655edf3a"
+    },
+    "company": {
+      "_id": "648717fac7573fac797f83fe",
+      "name": "Lazada Việt Nam"
+    },
+    "email": "admin@lazada.com",
+    "password": "$2a$10$j6OqlInwsR32KIT5rpAZl.a7u8VUqrS3Z3c8wa59HrtlvzqAF0bcW",
+    "createdAt": {
+      "$date": "2024-12-03T22:43:44.322Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-03T22:43:44.322Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "674f89bdb7aeb50679f67528"
+    },
+    "name": "User Lazada",
+    "age": 34,
+    "gender": "male",
+    "address": "163 Elm Street",
+    "role": {
+      "$oid": "6717776e43f578b1655edf3b"
+    },
+    "company": {
+      "_id": "648717fac7573fac797f83fe",
+      "name": "Lazada Việt Nam"
+    },
+    "email": "user@lazada.com",
+    "password": "$2a$10$cA86278Sz90Jhzjgw9rrdu0RiC0IYvX/rsHpvmo9/ekNPOk.kSEE6",
+    "createdAt": {
+      "$date": "2024-12-03T22:44:13.629Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-03T22:44:13.629Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "674f89e4b7aeb50679f67529"
+    },
+    "name": "Admin Netflix",
+    "age": 25,
+    "gender": "male",
+    "address": "341 Main Street",
+    "role": {
+      "$oid": "6717776e43f578b1655edf3a"
+    },
+    "company": {
+      "_id": "64871834c7573fac797f8402",
+      "name": "Netflix Inc"
+    },
+    "email": "admin@netflix.com",
+    "password": "$2a$10$t7EW7X9FayuRVl4ekS7NGuJZX0pzcWmx6Ine.knnTF6qnL00XLRPW",
+    "createdAt": {
+      "$date": "2024-12-03T22:44:52.671Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-03T22:44:52.671Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "674f89f6b7aeb50679f6752a"
+    },
+    "name": "User Netflix",
+    "age": 35,
+    "gender": "male",
+    "address": "900 Elm Street",
+    "role": {
+      "$oid": "6717776e43f578b1655edf3b"
+    },
+    "company": {
+      "_id": "64871834c7573fac797f8402",
+      "name": "Netflix Inc"
+    },
+    "email": "user@netflix.com",
+    "password": "$2a$10$cj6Sg/3q.e8.OMzpdrGxw.6n95hfqNa1KNApGiEJLyCedjdhzMk22",
+    "createdAt": {
+      "$date": "2024-12-03T22:45:10.389Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-03T22:45:10.389Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "674f8a0ab7aeb50679f6752b"
+    },
+    "name": "Admin Adobe Photoshop",
+    "age": 31,
+    "gender": "male",
+    "address": "747 Broadway",
+    "role": {
+      "$oid": "6717776e43f578b1655edf3a"
+    },
+    "company": {
+      "_id": "64871862c7573fac797f8406",
+      "name": "Adobe Photoshop"
+    },
+    "email": "admin@adobephotoshop.com",
+    "password": "$2a$10$IA7BUe4j/MDrkgtCjm7NeeqxIMXshVfl/cBjfrDbb4Dw2KMmxvtLW",
+    "createdAt": {
+      "$date": "2024-12-03T22:45:30.717Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-03T22:45:30.717Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "674f8a17b7aeb50679f6752c"
+    },
+    "name": "User adobephotoshop",
+    "age": 43,
+    "gender": "male",
+    "address": "42 Elm Street",
+    "role": {
+      "$oid": "6717776e43f578b1655edf3b"
+    },
+    "company": {
+      "_id": "64871862c7573fac797f8406",
+      "name": "Adobe Photoshop"
+    },
+    "email": "user@adobephotoshop.com",
+    "password": "$2a$10$i3X4FDgjbo/QEWQrnR3jXOC7zhJ.cwmswyeMuiEuvzcnGuHx.iUtm",
+    "createdAt": {
+      "$date": "2024-12-03T22:45:43.446Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-03T22:45:43.446Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "674f8a3bb7aeb50679f6752d"
+    },
+    "name": "Admin Tập đoàn Adobe ",
+    "age": 32,
+    "gender": "female",
+    "address": "940 Broadway",
+    "role": {
+      "$oid": "6717776e43f578b1655edf3a"
+    },
+    "company": {
+      "_id": "64871896c7573fac797f840a",
+      "name": "Tập đoàn Adobe "
+    },
+    "email": "admin@tapdoanadobe.com",
+    "password": "$2a$10$2qb2s42nsUr3JXhkikB3I.0MWvRrHqZ7lO/SrqbqLQTobJ7I7HV0G",
+    "createdAt": {
+      "$date": "2024-12-03T22:46:19.940Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-03T22:46:19.940Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "674f8a67b7aeb50679f6752e"
+    },
+    "name": "User Tập đoàn Adobe",
+    "age": 29,
+    "gender": "male",
+    "address": "328 Elm Street",
+    "role": {
+      "$oid": "6717776e43f578b1655edf3b"
+    },
+    "company": {
+      "_id": "64871896c7573fac797f840a",
+      "name": "Tập đoàn Adobe "
+    },
+    "email": "user@tapdoanadobe.com",
+    "password": "$2a$10$88zXEKxm.0QCyogCqNg8buTpsGJRU90aF84XpaLFTpmCySaMLjVUy",
+    "createdAt": {
+      "$date": "2024-12-03T22:47:03.099Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-03T22:47:03.099Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "674f8a77b7aeb50679f6752f"
+    },
+    "name": "Admin Shopee",
+    "age": 27,
+    "gender": "female",
+    "address": "353 Broadway",
+    "role": {
+      "$oid": "6717776e43f578b1655edf3a"
+    },
+    "company": {
+      "_id": "648718ccc7573fac797f840e",
+      "name": "Shopee "
+    },
+    "email": "admin@shopee.com",
+    "password": "$2a$10$lMtO1K93dUKVFiI.89YyFeEk0yReKNzNJHuKmLss4NET5KYl2.6uC",
+    "createdAt": {
+      "$date": "2024-12-03T22:47:19.348Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-03T22:47:19.348Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "674f8a85b7aeb50679f67530"
+    },
+    "name": "User Shopee",
+    "age": 32,
+    "gender": "male",
+    "address": "291 Elm Street",
+    "role": {
+      "$oid": "6717776e43f578b1655edf3b"
+    },
+    "company": {
+      "_id": "648718ccc7573fac797f840e",
+      "name": "Shopee "
+    },
+    "email": "user@shopee.com",
+    "password": "$2a$10$XgKmAssyLuiOAfCCSPM80.zymHHdvwceqfhOrbmaNXG4Ej1zs.DPi",
+    "createdAt": {
+      "$date": "2024-12-03T22:47:33.056Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-03T22:47:33.056Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "674f8af3a9bce694bf24eb5f"
+    },
+    "name": "Admin Tiki",
+    "age": 43,
+    "gender": "female",
+    "address": "958 Elm Street",
+    "role": {
+      "$oid": "6717776e43f578b1655edf3a"
+    },
+    "company": {
+      "_id": "6487197ec7573fac797f8414",
+      "name": "Tiki"
+    },
+    "email": "admin@tiki.com",
+    "password": "$2a$10$r.zdhh9hIwzz3x.J7Pfn6O3yrPfL4ASlRUcmvkUHHGVApYrDjXZlq",
+    "createdAt": {
+      "$date": "2024-12-03T22:49:23.787Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-03T22:49:23.787Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "674f8b0ca9bce694bf24eb60"
+    },
+    "name": "User Tiki",
+    "age": 41,
+    "gender": "male",
+    "address": "605 Broadway",
+    "role": {
+      "$oid": "6717776e43f578b1655edf3b"
+    },
+    "company": {
+      "_id": "6487197ec7573fac797f8414",
+      "name": "Tiki"
+    },
+    "email": "user@tiki.com",
+    "password": "$2a$10$P2MNLY6oXi.mmdTsWqSQEu70O5QTHU.qREkWOBs0KwrCmHQKXdf7S",
+    "createdAt": {
+      "$date": "2024-12-03T22:49:48.220Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-03T22:49:48.220Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "674f8b42422cbdb7bf8d6278"
+    },
+    "name": "Duy Anh",
+    "age": 49,
+    "gender": "male",
+    "address": "107 Broadway",
+    "role": {
+      "$oid": "6717776e43f578b1655edf3a"
+    },
+    "company": {
+      "_id": "648719bdc7573fac797f8418",
+      "name": "Tiktok"
+    },
+    "email": "admin@tiktok.com",
+    "password": "$2a$10$i7BTCpwG9QR6EqQcSbyYN.0ZxL3a08vVbycOvQmR3p1RXjY0r6Zl2",
+    "createdAt": {
+      "$date": "2024-12-03T22:50:42.390Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-03T22:57:12.863Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "674f8b7369f1bc919a8cd692"
+    },
+    "name": "User Tiktok",
+    "age": 30,
+    "gender": "female",
+    "address": "991 Elm Street",
+    "role": {
+      "$oid": "6717776e43f578b1655edf3b"
+    },
+    "company": {
+      "_id": "648719bdc7573fac797f8418",
+      "name": "Tiktok"
+    },
+    "email": "user@tiktok.com",
+    "password": "$2a$10$Z9V.BYCsBqa/LCrXyBAJj.KKHBzFEhpL43Ihyb2G5s3wpCn3S/kgi",
+    "createdAt": {
+      "$date": "2024-12-03T22:51:31.835Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-03T22:51:31.835Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "674f8be8e61f5b15da47c404"
+    },
+    "name": "Duy Anh",
+    "age": 30,
+    "gender": "male",
+    "address": "Di An",
+    "role": {
+      "$oid": "6717776e43f578b1655edf3a"
+    },
+    "company": {
+      "_id": "648719bdc7573fac797f8418",
+      "name": "Tiktok"
+    },
+    "email": "duyanh@gmail.com",
+    "password": "$2a$10$KFM8EojR.kmLjxbC/9rXpuGXJwhuQKtT1ZZpHoZ6.6DOgxpuM8RYy",
+    "createdAt": {
+      "$date": "2024-12-03T22:53:28.105Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-03T22:53:28.105Z"
+    },
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b2tlbiBsb2dpbiIsImlzcyI6ImZyb20gc2VydmVyIiwiX2lkIjoiNjc0ZjhiZThlNjFmNWIxNWRhNDdjNDA0IiwibmFtZSI6IkR1eSBBbmgiLCJlbWFpbCI6ImR1eWFuaEBnbWFpbC5jb20iLCJyb2xlIjoiNjcxNzc3NmU0M2Y1NzhiMTY1NWVkZjNhIiwiaWF0IjoxNzMzNzQ1MzIwLCJleHAiOjE3MzM4MzE3MjB9.6SL_va_s2j_9GU8yWUClmj7abC73ex2ekbIi3gLtvEM"
+  },
+  {
+    "_id": {
+      "$oid": "67503e7206bf11e196e225b8"
+    },
+    "name": "DA",
+    "age": 30,
+    "gender": "male",
+    "address": "Di An",
+    "role": "6717776e43f578b1655edf3b",
+    "company": {
+      "_id": "648719bdc7573fac797f8418",
+      "name": "Tiktok"
+    },
+    "email": "da@gmail.com",
+    "password": "$2a$10$NH5Ms9.OAzKsV7yg0697RuYx9JeCSW62yeHG2qb2JzdnG8yI0W7p.",
+    "createdAt": {
+      "$date": "2024-12-04T11:35:14.659Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-04T11:35:14.659Z"
+    },
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b2tlbiBsb2dpbiIsImlzcyI6ImZyb20gc2VydmVyIiwiX2lkIjoiNjc1MDNlNzIwNmJmMTFlMTk2ZTIyNWI4IiwibmFtZSI6IkRBIiwiZW1haWwiOiJkYUBnbWFpbC5jb20iLCJyb2xlIjoiNjcxNzc3NmU0M2Y1NzhiMTY1NWVkZjNiIiwiaWF0IjoxNzMzNjA3NzgxLCJleHAiOjE3MzM2OTQxODF9.KHQ3hCtQ5BF6-524802yn4YnYzuPDUHrPWTzPYckt50"
+  },
+  {
+    "_id": {
+      "$oid": "675099d9c2fa102df774c493"
+    },
+    "name": "LeDuyAnh",
+    "email": "da123@gmail.com",
+    "password": "$2a$10$DirnzZRLW0Yq6Wj.aCcBBuOOn/uO2d3vL/tAmYRRUoB3GxibRW81.",
+    "age": 18,
+    "gender": "male",
+    "address": "HCM",
+    "createdAt": {
+      "$date": "2024-12-04T18:05:13.632Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-04T18:05:13.632Z"
+    },
+    "role": {
+      "$oid": "6717776e43f578b1655edf3b"
+    },
+    "refreshToken": ""
+  },
+  {
+    "_id": {
+      "$oid": "6750bce67a0c70d369f5b0de"
+    },
+    "name": "123",
+    "email": "dg@gmail.com",
+    "password": "$2a$10$5KXWOx0n.0SWOqXnh4pcKe5yW6LccTRNkjCK3VLFzi83bqoPqRppC",
+    "age": 12,
+    "gender": "male",
+    "address": "321",
+    "createdAt": {
+      "$date": "2024-12-04T20:34:46.230Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-04T20:34:46.230Z"
+    },
+    "role": {
+      "$oid": "6717776e43f578b1655edf3b"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6750c8bcfc8ccbc52cfeecba"
+    },
+    "name": "Ngoc",
+    "age": 22,
+    "gender": "female",
+    "role": "6717776e43f578b1655edf3a",
+    "company": {
+      "_id": "67508ccf1e6e4f100512df3f",
+      "name": "Meta"
+    },
+    "address": "Ho Chi Minh City",
+    "email": "ngoc@gmail.com",
+    "password": "$2a$10$Rwi5HHGNGEge5b0tTfOSwemijv/yDJry4KK7X6kgBJu73GQiPtHzi",
+    "createdAt": {
+      "$date": "2024-12-04T21:25:16.505Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-04T21:25:16.505Z"
+    },
+    "refreshToken": ""
+  }
+]
